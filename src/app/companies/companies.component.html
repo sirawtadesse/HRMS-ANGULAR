@@ -1,0 +1,62 @@
+
+<div class="container">
+  <h2>Manage Companies</h2>
+  <form (ngSubmit)="editCompanyId ? updateCompany() : addCompany()" class="company-form">
+    <input [(ngModel)]="newCompany.name" name="name" placeholder="Company Name" required />
+    <input [(ngModel)]="newCompany.location" name="location" placeholder="Location" required />
+    
+    <label for="employees">Select Employees:</label>
+    <select multiple [(ngModel)]="newCompany.employees" name="employees" id="employees" class="form-select">
+      <option *ngFor="let employee of employees" [ngValue]="employee">
+        {{ employee.id }} - {{ employee.name }} ({{ employee.position }})
+      </option>
+    </select>
+
+    <label for="candidates">Select Candidates:</label>
+    <select multiple [(ngModel)]="newCompany.candidates" name="candidates" id="candidates" class="form-select">
+      <option *ngFor="let candidate of candidates" [ngValue]="candidate">
+        {{ candidate.id }} - {{ candidate.name }} ({{ candidate.appliedPosition }})
+      </option>
+    </select>
+
+    <button type="submit">{{ editCompanyId ? 'Update' : 'Add' }} Company</button>
+  </form>
+
+  <table class="company-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Employees</th>
+        <th>Candidates</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of companies">
+        <td>{{ company.id }}</td>
+        <td>{{ company.name }}</td>
+        <td>{{ company.location }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let employee of company.employees">
+              {{ employee.id }} - {{ employee.name }} ({{ employee.position }})
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li *ngFor="let candidate of company.candidates">
+              {{ candidate.id }} - {{ candidate.name }} ({{ candidate.appliedPosition }})
+            </li>
+          </ul>
+        </td>
+        <td>
+          <button (click)="editCompany(company)">Edit</button>
+          <button (click)="deleteCompany(company.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

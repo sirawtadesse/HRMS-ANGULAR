@@ -1,0 +1,23 @@
+<div class="navbar">
+  <div class="logo">Simple HRM System</div>
+  <span class="menu-icon" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+  </span>
+  <nav [ngClass]="{ 'show': isMenuOpen }">
+      <ul class="nav-list">
+          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+          <li *ngIf="isLoggedIn()"><a routerLink="/candidates" routerLinkActive="active">Candidates</a></li>
+          <li *ngIf="isLoggedIn()"><a routerLink="/companies" routerLinkActive="active">Companies</a></li>
+          <li *ngIf="isLoggedIn()"><a routerLink="/employees" routerLinkActive="active">Employees</a></li>
+          <li *ngIf="isLoggedIn()"><a routerLink="/departments" routerLinkActive="active">Departments</a></li>
+          <li *ngIf="isLoggedIn()"><a routerLink="/salaries" routerLinkActive="active">Salaries</a></li>
+          <li *ngIf="isLoggedIn()"><a routerLink="/profile" routerLinkActive="active">HrAdmin</a></li>
+          <li *ngIf="!isLoggedIn()"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+      </ul>
+  </nav>
+</div>
+<app-chatbot></app-chatbot>
+<app-telegram></app-telegram>
+<main>
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container Styles */
+.container {
+  display: block;
+  max-width: 800px;
+  margin: auto;
+  padding: 70px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Form Styles */
+.candidate-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #007bff;
+  outline: none; /* Remove default outline */
+}
+
+/* Submit Button Styles */
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  display: block; /* Makes the table responsive */
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styles for Actions */
+.edit-button,
+.delete-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px 5px;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #c82333;
+}
+
+.delete-button:hover {
+  background-color:   #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+
+  .form-input, .form-select, .submit-button {
+      font-size: 14px;
+  }
+
+  th, td {
+      padding: 10px;
+  }
+
+  /* Ensure the table is scrollable */
+  table {
+      display: block; /* Enables scrolling on mobile */
+      overflow-x: auto; /* Allows horizontal scrolling */
+      white-space: nowrap; /* Prevents text wrapping */
+  }
+}

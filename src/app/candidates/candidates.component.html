@@ -1,0 +1,102 @@
+
+<div class="container">
+  <h2>Candidate Management</h2>
+  <form (ngSubmit)="addCandidate()" class="candidate-form">
+    <div class="form-group">
+      <input
+        [(ngModel)]="newCandidate.name"
+        name="name"
+        placeholder="Name"
+        required
+        class="form-input"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        [(ngModel)]="newCandidate.appliedPosition"
+        name="appliedPosition"
+        placeholder="Applied Position"
+        required
+        class="form-input"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        [(ngModel)]="newCandidate.email"
+        name="email"
+        placeholder="Email"
+        required
+        class="form-input"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        [(ngModel)]="newCandidate.phone"
+        name="phone"
+        placeholder="Phone"
+        required
+        class="form-input"
+      />
+    </div>
+    <div class="form-group">
+      <select
+        [(ngModel)]="newCandidate.companyId"
+        name="companyId"
+        required
+        class="form-select"
+      >
+        <option value="" disabled selected>Select Company ID</option>
+        <option *ngFor="let company of companies" [value]="company.id">
+          {{ company.id }} - {{ company.name }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select
+        [(ngModel)]="newCandidate.status"
+        name="status"
+        required
+        class="form-select"
+      >
+        <option value="" disabled>Select Status</option>
+        <option value="applied">Applied</option>
+        <option value="interviewed">Interviewed</option>
+        <option value="hired">Hired</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </div>
+    <button type="submit" class="submit-button">
+      {{ editCandidateId ? 'Update' : 'Add' }} Candidate
+    </button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Applied Position</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Status</th>
+        <th>Company ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidate of candidates">
+        <td>{{ candidate.id }}</td>
+        <td>{{ candidate.name }}</td>
+        <td>{{ candidate.appliedPosition }}</td>
+        <td>{{ candidate.email }}</td>
+        <td>{{ candidate.phone }}</td>
+        <td>{{ candidate.status }}</td>
+        <td>{{ candidate.companyId }}</td>
+        <td>
+          <button class="edit-button" (click)="editCandidate(candidate)">Edit</button>
+          <button class="delete-button" (click)="deleteCandidate(candidate.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

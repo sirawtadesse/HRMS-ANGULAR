@@ -1,0 +1,128 @@
+<div class="scroll-buttons">
+    <button (click)="scrollTo('top')" class="scroll-button">↑</button>
+    <button (click)="scrollTo('bottom')" class="scroll-button">↓</button>
+</div>
+
+<div class="hero">
+    <h1>Welcome to XOKA IT Solutions</h1>
+    <p>Streamline your processes with cutting-edge technology and innovative solutions.</p>
+    <a href="#services" class="cta-button">Learn More</a>
+</div>
+
+
+
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <div class="about-content">
+        <div class="about-image">
+            <img src="/assets/images/about.jpg" alt="About Us Image" />
+        </div>
+        <div class="about-text">
+            <p>We are dedicated to providing the best IT solutions to enhance productivity and drive success.</p>
+            <ul class="about-list">
+                <li><strong>Tailored Solutions:</strong> Our team of experienced professionals works tirelessly to understand your unique challenges and deliver customized solutions.</li>
+                <li><strong>Comprehensive Services:</strong> From cloud computing and data analytics to cybersecurity and IT consulting, we cover all your IT needs.</li>
+                <li><strong>Long-term Partnerships:</strong> We believe in fostering lasting relationships with our clients, ensuring ongoing support and innovation.</li>
+                <li><strong>Digital Transformation:</strong> Join us on a journey to unlock the full potential of your business through effective digital strategies.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-items">
+        <div class="service-item">
+            <img src="/assets/images/recruitment.jpg" alt="Recruitment Management" class="service-image">
+            <h3>Recruitment Management</h3>
+            <p>Efficiently manage the recruitment process from job postings to candidate selection.</p>
+        </div>
+        <div class="service-item">
+            <img src="/assets/images/onboarding.jpg" alt="Employee Onboarding" class="service-image">
+            <h3>Employee Onboarding</h3>
+            <p>Seamless onboarding experience for new hires to get them started quickly.</p>
+        </div>
+        <div class="service-item">
+            <img src="/assets/images/performance.jpg" alt="Performance Tracking" class="service-image">
+            <h3>Performance Tracking</h3>
+            <p>Monitor and evaluate employee performance with our comprehensive tools.</p>
+        </div>
+
+        <div class="service-item">
+            <img src="/assets/images/software-development.jpg" alt="Software Development" class="service-image">
+            <h3>Software Development</h3>
+            <p>Custom software solutions tailored to meet your business needs and enhance efficiency.</p>
+        </div>
+        <div class="service-item">
+            <img src="/assets/images/data-analytics.jpg" alt="Data Analytics" class="service-image">
+            <h3>Data Analytics</h3>
+            <p>Transform your data into actionable insights to make informed business decisions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
+        <div class="form-group">
+            <label for="recipient">Recipient Email:</label>
+            <input type="email" id="recipient" [(ngModel)]="message.recipient" name="recipient" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" [(ngModel)]="message.name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" [(ngModel)]="message.email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" [(ngModel)]="message.subject" name="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" [(ngModel)]="message.message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+    </form>
+</section>
+
+
+<!-- Google Map Section -->
+<section id="map" class="map">
+    <h2>Visit Us</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509704!2d38.767203815318136!3d9.145209490575479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b84512f0b0b91%3A0x7a18d1c5a2e7a3a2!2sDenbel%20City%20Center!5e0!3m2!1sen!2set!4v1693130695321!5m2!1sen!2set"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"></iframe>
+</section>
+
+
+<footer class="footer">
+    <div class="social-media">
+        <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="http://www.linkedin.com/in/siraw-tadesse-668088274" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="http://www.github.com/sirawtadesse/" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="http://sirawtadesse.github.io/my-portfolio/" target="_blank" class="social-icon">
+            <i class="fas fa-briefcase"></i> <!-- Portfolio icon -->
+        </a>
+    </div>
+    <p>&copy; 2024 XOKA IT Solutions Company. All rights reserved.</p>
+</footer>
+

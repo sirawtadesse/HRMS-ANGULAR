@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 70px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+/* Button Styles */
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:active {
+  transform: scale(0.98); /* Slightly shrink button on click */
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Light grey when hovering over a row */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+
+  input, button {
+      font-size: 14px;
+  }
+
+  th, td {
+      padding: 10px;
+  }
+}

@@ -1,0 +1,42 @@
+
+<div class="container">
+  <h2>Manage Salaries</h2>
+  <form (ngSubmit)="editSalaryId ? updateSalary() : addSalary()">
+    <label for="employeeId">Select Employee</label>
+    <select [(ngModel)]="newSalary.employeeId" name="employeeId" required>
+      <option *ngFor="let employee of employees" [value]="employee.id">{{ employee.id }} - {{ employee.name }}</option>
+    </select>
+
+    <label for="amount">Amount</label>
+    <input [(ngModel)]="newSalary.amount" name="amount" placeholder="Amount" required type="number" />
+
+    <label for="currency">Currency</label>
+    <input [(ngModel)]="newSalary.currency" name="currency" placeholder="Currency" required />
+
+    <button type="submit">{{ editSalaryId ? 'Update' : 'Add' }} Salary</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Employee ID</th>
+        <th>Amount</th>
+        <th>Currency</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let salary of salaries">
+        <td>{{ salary.id }}</td>
+        <td>{{ salary.employeeId }}</td> <!-- Display employee ID -->
+        <td>{{ salary.amount }}</td>
+        <td>{{ salary.currency }}</td>
+        <td>
+          <button (click)="editSalary(salary)">Edit</button>
+          <button (click)="deleteSalary(salary.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

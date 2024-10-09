@@ -1,0 +1,21 @@
+/* src/styles.css */
+.telegram-icon {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    background-color: #0088cc; /* Telegram color */
+    border-radius: 50%; /* Circular background */
+    padding: 10px; /* Spacing around the icon */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .telegram-icon a {
+    color: white; /* Icon color */
+    font-size: 24px; /* Icon size */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .telegram-icon:hover {
+    background-color: #007bb5; /* Darker shade on hover */
+  }

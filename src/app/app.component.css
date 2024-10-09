@@ -1,0 +1,108 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4CAF50; /* Green background */
+    padding: 15px;
+    color: white;
+    position: fixed; /* Fixes the navbar */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Stays above other content */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu Icon Styling */
+.menu-icon {
+    cursor: pointer;
+    display: none; /* Hidden on larger screens */
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Active Link Styling */
+.nav-list a.active {
+    border-bottom: 2px solid white; /* Underline for active link */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    nav {
+        display: none; /* Hide nav initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Match header height */
+        left: 0;
+        width: 100%;
+        background-color: #4CAF50; /* Match navbar background */
+        z-index: 1000; /* Ensure dropdown is above other content */
+    }
+
+    nav.show {
+        display: flex; /* Show when toggled */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        text-align: center; /* Center align items in mobile */
+    }
+
+    /* Ensure main content is not hidden */
+    main {
+        padding-top: 60px; /* Adjust this value to match navbar height */
+    }
+}
+
+/* Hide menu icon in larger screens */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Keep it hidden on larger screens */
+    }
+}
