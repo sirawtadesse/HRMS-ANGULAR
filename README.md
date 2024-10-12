@@ -1,27 +1,52 @@
-# HrApp
+# Angular HRMS with In-Memory Web API
+# Overview
+This project is a Human Resource Management System built using Angular, a popular TypeScript-based framework for creating web applications. It leverages the in-memory web API to provide a mock backend for development and testing purposes.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
+# Features
+# Employee Management:
+Create, update, and delete employee records.
+View employee profiles, including personal information, job details, and contact details.
+Search for employees by various criteria (e.g., name, department, position).
+# Department Management:
+Create, update, and delete department records.
+Assign employees to departments and view department hierarchies.
 
-## Development server
+# Technologies Used
+Angular: A framework for building web applications using TypeScript.
+In-Memory Web API: A mock backend for development and testing.
+TypeScript: A typed superset of JavaScript for improved code maintainability.
+HTML and CSS: For creating the user interface.
+Angular Material: A UI component library for building consistent and responsive interfaces.
+Installation and Setup
+# Clone the Repository:
+Bash
+git clone https://github.com/sirawtadesse/HRMS-ANGULAR.git
+Use code with caution.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Install Dependencies:
+Bash
+cd angular-hrms
+npm install
+Use code with caution.
 
-## Code scaffolding
+# Run the Development Server:
+Bash
+ng serve
+Use code with caution.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The application will be available at http://localhost:4200.
+# API Endpoints
+The in-memory web API provides mock data for the following endpoints:
 
-## Build
+# Employees:
+GET /api/employees: Retrieves all employees.
+POST /api/employees: Creates a new employee.
+PUT /api/employees/:id: Updates an existing employee.
+DELETE /api/employees/:id: Deletes an employee.   
+# Departments:
+GET /api/departments: Retrieves all departments.
+POST /api/departments: Creates a new department.
+PUT /api/departments/:id: Updates an existing department.
+DELETE /api/departments/:id: Deletes a department.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Contributions to this project are welcome! Please feel free to fork the repository, make changes, and submit a pull request.
